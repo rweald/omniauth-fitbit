@@ -13,6 +13,10 @@ module OmniAuth
           :access_token_path  => '/oauth/access_token',
           :authorize_path     => '/oauth/authorize'
       }
+      
+      option :authorize_params, {
+        :display => "touch"
+      }
 
       uid do
         access_token.params['encoded_user_id']
